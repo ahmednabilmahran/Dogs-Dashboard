@@ -1,3 +1,14 @@
 {
-    "noInternetConnection": "لا يوجد اتصال بالإنترنت"
+  "noInternetConnection": "لا يوجد اتصال بالإنترنت",
+  "dogsDashboard": "عرض الكلاب",
+  "randomImageByBreed": "صورة عشوائية حسب السلالة",
+  "imagesListByBreed": "قائمة الصور حسب السلالة",
+  "randomImageByBreedAndSubBreed": "صورة عشوائية حسب السلالة والسلالة الفرعية",
+  "imagesListByBreedAndSubBreed": "قائمة الصور حسب السلالة والسلالة الفرعية",
+  "english": "الإنجليزية",
+  "arabic": "العربية",
+  "italian": "الإيطالية",
+  "system": "نظام",
+  "light": "ضوء",
+  "dark": "داكن"
 }

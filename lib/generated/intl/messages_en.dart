@@ -22,7 +22,22 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
+        "dark": MessageLookupByLibrary.simpleMessage("Dark"),
+        "dogsDashboard": MessageLookupByLibrary.simpleMessage("Dogs Dashboard"),
+        "english": MessageLookupByLibrary.simpleMessage("English"),
+        "imagesListByBreed":
+            MessageLookupByLibrary.simpleMessage("Images list by breed"),
+        "imagesListByBreedAndSubBreed": MessageLookupByLibrary.simpleMessage(
+            "Images list by breed and sub breed"),
+        "italian": MessageLookupByLibrary.simpleMessage("Italian"),
+        "light": MessageLookupByLibrary.simpleMessage("Light"),
         "noInternetConnection":
-            MessageLookupByLibrary.simpleMessage("No internet connection")
+            MessageLookupByLibrary.simpleMessage("No internet connection"),
+        "randomImageByBreed":
+            MessageLookupByLibrary.simpleMessage("Random image by breed"),
+        "randomImageByBreedAndSubBreed": MessageLookupByLibrary.simpleMessage(
+            "Random image by breed and sub breed"),
+        "system": MessageLookupByLibrary.simpleMessage("System")
       };
 }

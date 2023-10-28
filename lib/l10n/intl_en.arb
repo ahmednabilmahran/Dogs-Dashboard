@@ -1,3 +1,14 @@
 {
-    "noInternetConnection": "No internet connection"
+  "noInternetConnection": "No internet connection",
+  "dogsDashboard": "Dogs Dashboard",
+  "randomImageByBreed": "Random image by breed",
+  "imagesListByBreed": "Images list by breed",
+  "randomImageByBreedAndSubBreed": "Random image by breed and sub breed",
+  "imagesListByBreedAndSubBreed": "Images list by breed and sub breed",
+  "english": "English",
+  "arabic": "Arabic",
+  "italian": "Italian",
+  "system": "System",
+  "light": "Light",
+  "dark": "Dark"
 }

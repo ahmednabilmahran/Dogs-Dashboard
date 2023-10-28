@@ -32,7 +32,7 @@ class _SplashScreenState extends State<SplashScreen>
                 scale: cubit.firstAnimation,
                 child: Center(
                   child: Image.asset(
-                    Assets.imagesLogoSplash,
+                    Assets.genImagesLogoSplash,
                     filterQuality: FilterQuality.high,
                   ),
                 ),

@@ -1,5 +1,6 @@
 import 'package:dogs_dashboard/config/routes/app_routes.dart';
 import 'package:dogs_dashboard/core/utils/app_strings.dart';
+import 'package:dogs_dashboard/features/dashboard/presentation/screens/dashboard_screen.dart';
 import 'package:dogs_dashboard/features/splash/presentation/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -19,16 +20,15 @@ class AppRoutes {
         );
 
       // Route for the AppLayout screen, with a fade transition.
-      case Routes.appLayoutRoute:
+      case Routes.dashboardRoute:
         return PageRouteBuilder(
           pageBuilder: (context, animation, secondaryAnimation) {
             return FadeTransition(
               opacity: animation,
-              child: const SplashScreen(),
-              // child: const AppLayoutScreen(),
+              child: const DashboardScreen(),
             );
           },
-          settings: const RouteSettings(name: Routes.appLayoutRoute),
+          settings: const RouteSettings(name: Routes.dashboardRoute),
           transitionDuration: Duration.zero,
         );
 

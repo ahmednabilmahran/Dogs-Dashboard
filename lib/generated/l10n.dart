@@ -59,6 +59,116 @@ class S {
       args: [],
     );
   }
+
+  /// `Dogs Dashboard`
+  String get dogsDashboard {
+    return Intl.message(
+      'Dogs Dashboard',
+      name: 'dogsDashboard',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Random image by breed`
+  String get randomImageByBreed {
+    return Intl.message(
+      'Random image by breed',
+      name: 'randomImageByBreed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Images list by breed`
+  String get imagesListByBreed {
+    return Intl.message(
+      'Images list by breed',
+      name: 'imagesListByBreed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Random image by breed and sub breed`
+  String get randomImageByBreedAndSubBreed {
+    return Intl.message(
+      'Random image by breed and sub breed',
+      name: 'randomImageByBreedAndSubBreed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Images list by breed and sub breed`
+  String get imagesListByBreedAndSubBreed {
+    return Intl.message(
+      'Images list by breed and sub breed',
+      name: 'imagesListByBreedAndSubBreed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `English`
+  String get english {
+    return Intl.message(
+      'English',
+      name: 'english',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Arabic`
+  String get arabic {
+    return Intl.message(
+      'Arabic',
+      name: 'arabic',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Italian`
+  String get italian {
+    return Intl.message(
+      'Italian',
+      name: 'italian',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `System`
+  String get system {
+    return Intl.message(
+      'System',
+      name: 'system',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Light`
+  String get light {
+    return Intl.message(
+      'Light',
+      name: 'light',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dark`
+  String get dark {
+    return Intl.message(
+      'Dark',
+      name: 'dark',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

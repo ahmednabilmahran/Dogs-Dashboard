@@ -4,7 +4,6 @@ import 'package:dogs_dashboard/config/themes/app_theme_dark.dart';
 import 'package:dogs_dashboard/core/injection_container.dart';
 import 'package:dogs_dashboard/core/utils/app_strings.dart';
 import 'package:dogs_dashboard/core/utils/no_glow.dart';
-import 'package:dogs_dashboard/core/utils/snack_x.dart';
 import 'package:dogs_dashboard/features/splash/domain/usecases/change_lang.dart';
 import 'package:dogs_dashboard/features/splash/domain/usecases/change_theme_mode.dart';
 import 'package:dogs_dashboard/features/splash/domain/usecases/get_saved_lang.dart';
@@ -40,39 +39,33 @@ class DogsDashboardApp extends StatelessWidget {
         ..getSavedLang()
         ..checkConnectivity()
         ..getSavedThemeMode(),
-      child: BlocListener<MainCubit, MainState>(
-        listener: (context, state) {
-          // Handles the state when there's no internet connection
-          if (state is MainNoInternetConnectionState) {
-            SnackX.showSnackBar(
-              message: S.of(context).noInternetConnection,
-            );
-          }
-        },
-        child: Sizer(
-          builder: (context, orientation, deviceType) => NoGlowScroll(
-            child: MaterialApp(
-              scaffoldMessengerKey: rootScaffoldMessengerKey,
-              navigatorKey: navigatorKey,
-              title: AppStrings.appName,
-              locale: Locale(MainCubit.get(context).currentLangCode),
-              debugShowCheckedModeBanner: false,
-              theme: AppTheme.theme(
-                MainCubit.get(context).currentLangCode,
-              ),
-              darkTheme: AppThemeDark.theme(
-                MainCubit.get(context).currentLangCode,
-              ),
-              themeMode: MainCubit.get(context).currentThemeMode,
-              onGenerateRoute: AppRoutes.onGenerateRoute,
-              supportedLocales: S.delegate.supportedLocales,
-              localizationsDelegates: const [
-                S.delegate,
-                GlobalMaterialLocalizations.delegate,
-                GlobalWidgetsLocalizations.delegate,
-                GlobalCupertinoLocalizations.delegate,
-              ],
-            ),
+      child: Sizer(
+        builder: (context, orientation, deviceType) => NoGlowScroll(
+          child: BlocBuilder<MainCubit, MainState>(
+            builder: (context, state) {
+              return MaterialApp(
+                scaffoldMessengerKey: rootScaffoldMessengerKey,
+                navigatorKey: navigatorKey,
+                title: AppStrings.appName,
+                locale: Locale(MainCubit.get(context).currentLangCode),
+                debugShowCheckedModeBanner: false,
+                theme: AppTheme.theme(
+                  MainCubit.get(context).currentLangCode,
+                ),
+                darkTheme: AppThemeDark.theme(
+                  MainCubit.get(context).currentLangCode,
+                ),
+                themeMode: MainCubit.get(context).currentThemeMode,
+                onGenerateRoute: AppRoutes.onGenerateRoute,
+                supportedLocales: S.delegate.supportedLocales,
+                localizationsDelegates: const [
+                  S.delegate,
+                  GlobalMaterialLocalizations.delegate,
+                  GlobalWidgetsLocalizations.delegate,
+                  GlobalCupertinoLocalizations.delegate,
+                ],
+              );
+            },
           ),
         ),
       ),

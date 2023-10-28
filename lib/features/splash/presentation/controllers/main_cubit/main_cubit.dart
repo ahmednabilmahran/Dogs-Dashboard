@@ -106,28 +106,16 @@ class MainCubit extends Cubit<MainState> {
   }
 
   /// Changes the app's current language.
-  Future<void> changeLang() async {
-    if (currentLangCode == AppStrings.englishCode) {
-      final response = await _changeLangUseCase.call(AppStrings.arabicCode);
-      response.fold(
-        (failure) {},
-        (value) {
-          currentLangCode = AppStrings.arabicCode;
-          S.load(const Locale(AppStrings.arabicCode));
-          emit(MainChangeLocaleState());
-        },
-      );
-    } else {
-      final response = await _changeLangUseCase.call(AppStrings.englishCode);
-      response.fold(
-        (failure) {},
-        (value) {
-          currentLangCode = AppStrings.englishCode;
-          S.load(const Locale(AppStrings.englishCode));
-          emit(MainChangeLocaleState());
-        },
-      );
-    }
+  Future<void> changeLang(String code) async {
+    final response = await _changeLangUseCase.call(AppStrings.arabicCode);
+    response.fold(
+      (failure) {},
+      (value) {
+        currentLangCode = code;
+        S.load(Locale(currentLangCode));
+        emit(MainChangeLocaleState());
+      },
+    );
   }
 
   /// Connectivity related members.

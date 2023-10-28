@@ -110,7 +110,7 @@ class SplashCubit extends Cubit<SplashState> {
   Future<void> _goNext(BuildContext context) async {
     await Navigator.pushNamedAndRemoveUntil(
       context,
-      Routes.appLayoutRoute,
+      Routes.dashboardRoute,
       (_) => false,
     );
   }

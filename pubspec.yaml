@@ -21,6 +21,7 @@ dependencies:
   flutter_launcher_icons: ^0.13.1
   flutter_localizations:
     sdk: flutter
+  flutter_svg: ^2.0.8
   get_it: ^7.6.4
   hive: ^2.2.3
   hive_flutter: ^1.1.0
@@ -40,16 +41,51 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-  
+
   assets:
-    - assets/images/
-    - assets/icons/
+    - assets/gen/images/
+    - assets/gen/icons/
+
+  fonts:
+    - family: Trap
+      fonts:
+        - asset: assets/fonts/Trap/Trap-Black 900.otf
+          weight: 900
+        - asset: assets/fonts/Trap/Trap-ExtraBold 800.otf
+          weight: 800
+        - asset: assets/fonts/Trap/Trap-Bold 700.otf
+          weight: 700
+        - asset: assets/fonts/Trap/Trap-SemiBold 600.otf
+          weight: 600
+        - asset: assets/fonts/Trap/Trap-Medium 500.otf
+          weight: 500
+        - asset: assets/fonts/Trap/Trap-Regular 400.otf
+          weight: 400
+        - asset: assets/fonts/Trap/Trap-Light 300.otf
+          weight: 300
+
+    - family: IBM Plex Sans Arabic
+      fonts:
+        - asset: assets/fonts/IBM Plex Sans Arabic/IBMPlexSansArabic-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/IBM Plex Sans Arabic/IBMPlexSansArabic-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/IBM Plex Sans Arabic/IBMPlexSansArabic-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/IBM Plex Sans Arabic/IBMPlexSansArabic-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/IBM Plex Sans Arabic/IBMPlexSansArabic-Light.ttf
+          weight: 300
+        - asset: assets/fonts/IBM Plex Sans Arabic/IBMPlexSansArabic-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/IBM Plex Sans Arabic/IBMPlexSansArabic-Thin.ttf
+          weight: 100
 
 flutter_intl:
   enabled: true
 
 flutter_assets:
-  assets_path: assets/
+  assets_path: assets/gen/
   output_path: lib/core/utils/
   filename: assets.dart
   field_prefix: null

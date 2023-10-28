@@ -4,5 +4,5 @@ class Routes {
   static const String initialRoute = '/';
 
   /// Route that leads to the main layout of the app.
-  static const String appLayoutRoute = '/appLayoutRoute';
+  static const String dashboardRoute = '/dashboard';
 }

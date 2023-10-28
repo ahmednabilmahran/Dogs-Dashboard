@@ -1,1 +1,14 @@
-{}
+{
+  "noInternetConnection": "Nessuna connessione internet",
+  "dogsDashboard": "Cruscotto dei cani",
+  "randomImageByBreed": "Immagine casuale per razza",
+  "imagesListByBreed": "Elenco immagini per razza",
+  "randomImageByBreedAndSubBreed": "Immagine casuale per razza e sottorazza",
+  "imagesListByBreedAndSubBreed": "Elenco delle immagini per razza e sottorazza",
+  "english": "Inglese",
+  "arabic": "Araba",
+  "italian": "Italiano",
+  "system": "Sistema",
+  "light": "Leggero",
+  "dark": "Buio"
+}

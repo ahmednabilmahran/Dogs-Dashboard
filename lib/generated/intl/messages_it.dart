@@ -21,5 +21,24 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'it';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
-  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{};
+  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "arabic": MessageLookupByLibrary.simpleMessage("Araba"),
+        "dark": MessageLookupByLibrary.simpleMessage("Buio"),
+        "dogsDashboard":
+            MessageLookupByLibrary.simpleMessage("Cruscotto dei cani"),
+        "english": MessageLookupByLibrary.simpleMessage("Inglese"),
+        "imagesListByBreed":
+            MessageLookupByLibrary.simpleMessage("Elenco immagini per razza"),
+        "imagesListByBreedAndSubBreed": MessageLookupByLibrary.simpleMessage(
+            "Elenco delle immagini per razza e sottorazza"),
+        "italian": MessageLookupByLibrary.simpleMessage("Italiano"),
+        "light": MessageLookupByLibrary.simpleMessage("Leggero"),
+        "noInternetConnection": MessageLookupByLibrary.simpleMessage(
+            "Nessuna connessione internet"),
+        "randomImageByBreed":
+            MessageLookupByLibrary.simpleMessage("Immagine casuale per razza"),
+        "randomImageByBreedAndSubBreed": MessageLookupByLibrary.simpleMessage(
+            "Immagine casuale per razza e sottorazza"),
+        "system": MessageLookupByLibrary.simpleMessage("Sistema")
+      };
 }

@@ -71,6 +71,18 @@ class AppStrings {
   /// Code for the Arabic language.
   static const String arabicCode = 'ar';
 
+  /// Code for the Italian language.
+  static const String italianCode = 'it';
+
   /// Locale string.
   static const String locale = 'locale';
+
+  /// Theme mode string.
+  static const String systemName = 'system';
+
+  /// Theme mode string.
+  static const String lightName = 'light';
+
+  /// Theme mode string.
+  static const String darkName = 'dark';
 }
