@@ -33,6 +33,7 @@ class _SplashScreenState extends State<SplashScreen>
                 child: Center(
                   child: Image.asset(
                     Assets.imagesLogoSplash,
+                    filterQuality: FilterQuality.high,
                   ),
                 ),
               ),
