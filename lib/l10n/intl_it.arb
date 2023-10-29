@@ -10,5 +10,10 @@
   "italian": "Italiano",
   "system": "Sistema",
   "light": "Leggero",
-  "dark": "Buio"
+  "dark": "Buio",
+  "selectBreed": "Seleziona una razza",
+  "selectSubBreed": "Seleziona una sottorazza",
+  "invalidOption": "Opzione non valida",
+  "generate": "Generaû",
+  "tryAgain": "Riprova"
 }

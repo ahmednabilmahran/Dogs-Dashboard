@@ -26,10 +26,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "dark": MessageLookupByLibrary.simpleMessage("داكن"),
         "dogsDashboard": MessageLookupByLibrary.simpleMessage("عرض الكلاب"),
         "english": MessageLookupByLibrary.simpleMessage("الإنجليزية"),
+        "generate": MessageLookupByLibrary.simpleMessage("إنشاء"),
         "imagesListByBreed":
             MessageLookupByLibrary.simpleMessage("قائمة الصور حسب السلالة"),
         "imagesListByBreedAndSubBreed": MessageLookupByLibrary.simpleMessage(
             "قائمة الصور حسب السلالة والسلالة الفرعية"),
+        "invalidOption": MessageLookupByLibrary.simpleMessage("خيار غير صالح"),
         "italian": MessageLookupByLibrary.simpleMessage("الإيطالية"),
         "light": MessageLookupByLibrary.simpleMessage("ضوء"),
         "noInternetConnection":
@@ -38,6 +40,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("صورة عشوائية حسب السلالة"),
         "randomImageByBreedAndSubBreed": MessageLookupByLibrary.simpleMessage(
             "صورة عشوائية حسب السلالة والسلالة الفرعية"),
-        "system": MessageLookupByLibrary.simpleMessage("نظام")
+        "selectBreed": MessageLookupByLibrary.simpleMessage("إختر سلالة"),
+        "selectSubBreed":
+            MessageLookupByLibrary.simpleMessage("اختر سلالة فرعية"),
+        "system": MessageLookupByLibrary.simpleMessage("نظام"),
+        "tryAgain": MessageLookupByLibrary.simpleMessage("اعد المحاولة")
       };
 }

@@ -10,5 +10,10 @@
   "italian": "Italian",
   "system": "System",
   "light": "Light",
-  "dark": "Dark"
+  "dark": "Dark",
+  "selectBreed": "Select a breed",
+  "selectSubBreed": "Select a sub breed",
+  "invalidOption": "Invalid Option",
+  "generate": "Generate",
+  "tryAgain": "Try again"
 }

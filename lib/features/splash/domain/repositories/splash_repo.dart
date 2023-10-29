@@ -28,4 +28,9 @@ abstract class SplashRepo {
   ///
   /// Returns [Either] a [Failure] or the saved theme mode as a [String].
   Future<Either<Failure, String>> getSavedThemeMode();
+
+  /// Retrieves all breeds.
+  ///
+  /// Returns [Either] a [Failure] or [Map<String, List<String>>].
+  Future<Either<Failure, Map<String, List<String>>>> getAllBreeds();
 }

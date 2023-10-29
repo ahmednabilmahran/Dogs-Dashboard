@@ -6,6 +6,7 @@ import 'package:dogs_dashboard/core/utils/app_strings.dart';
 import 'package:dogs_dashboard/core/utils/no_glow.dart';
 import 'package:dogs_dashboard/features/splash/domain/usecases/change_lang.dart';
 import 'package:dogs_dashboard/features/splash/domain/usecases/change_theme_mode.dart';
+import 'package:dogs_dashboard/features/splash/domain/usecases/get_all_breeds_usecase.dart';
 import 'package:dogs_dashboard/features/splash/domain/usecases/get_saved_lang.dart';
 import 'package:dogs_dashboard/features/splash/domain/usecases/get_saved_theme_mode.dart';
 import 'package:dogs_dashboard/features/splash/presentation/controllers/main_cubit/main_cubit.dart';
@@ -31,11 +32,13 @@ class DogsDashboardApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => MainCubit(
+        getIt<GetAllBreedsUseCase>(),
         getIt<GetSavedLangUseCase>(),
         getIt<ChangeLangUseCase>(),
         getIt<GetSavedThemeModeUseCase>(),
         getIt<ChangeThemeModeUseCase>(),
       )
+        ..getAllBreeds()
         ..getSavedLang()
         ..checkConnectivity()
         ..getSavedThemeMode(),

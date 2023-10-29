@@ -27,10 +27,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "dogsDashboard":
             MessageLookupByLibrary.simpleMessage("Cruscotto dei cani"),
         "english": MessageLookupByLibrary.simpleMessage("Inglese"),
+        "generate": MessageLookupByLibrary.simpleMessage("Generaû"),
         "imagesListByBreed":
             MessageLookupByLibrary.simpleMessage("Elenco immagini per razza"),
         "imagesListByBreedAndSubBreed": MessageLookupByLibrary.simpleMessage(
             "Elenco delle immagini per razza e sottorazza"),
+        "invalidOption":
+            MessageLookupByLibrary.simpleMessage("Opzione non valida"),
         "italian": MessageLookupByLibrary.simpleMessage("Italiano"),
         "light": MessageLookupByLibrary.simpleMessage("Leggero"),
         "noInternetConnection": MessageLookupByLibrary.simpleMessage(
@@ -39,6 +42,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Immagine casuale per razza"),
         "randomImageByBreedAndSubBreed": MessageLookupByLibrary.simpleMessage(
             "Immagine casuale per razza e sottorazza"),
-        "system": MessageLookupByLibrary.simpleMessage("Sistema")
+        "selectBreed":
+            MessageLookupByLibrary.simpleMessage("Seleziona una razza"),
+        "selectSubBreed":
+            MessageLookupByLibrary.simpleMessage("Seleziona una sottorazza"),
+        "system": MessageLookupByLibrary.simpleMessage("Sistema"),
+        "tryAgain": MessageLookupByLibrary.simpleMessage("Riprova")
       };
 }

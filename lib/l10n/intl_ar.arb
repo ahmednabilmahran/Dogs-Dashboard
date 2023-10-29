@@ -10,5 +10,10 @@
   "italian": "الإيطالية",
   "system": "نظام",
   "light": "ضوء",
-  "dark": "داكن"
+  "dark": "داكن",
+  "selectBreed": "إختر سلالة",
+  "selectSubBreed": "اختر سلالة فرعية",
+  "invalidOption": "خيار غير صالح",
+  "generate": "إنشاء",
+  "tryAgain": "اعد المحاولة"
 }

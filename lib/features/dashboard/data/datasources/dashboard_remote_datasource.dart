@@ -26,11 +26,12 @@ class DashboardRemoteDataSourceImpl implements DashboardRemoteDataSource {
   @override
   Future<String> getRandomImageByBreed(String breed) async {
     final data = await DioHelper.getData(
-      url: '$breed/${EndPoints.randomImagesEndPoint}',
+      url:
+          '${EndPoints.breedEndPoint}/$breed/${EndPoints.randomImagesEndPoint}',
     );
     if (data.statusCode == 200 &&
         (data.data as Map<String, dynamic>)['status'] as String == 'success') {
-      return (data.data as Map<String, dynamic>)['message'] as Future<String>;
+      return (data.data as Map<String, dynamic>)['message'] as String;
     } else {
       throw Exception('Something went wrong');
     }
@@ -39,13 +40,13 @@ class DashboardRemoteDataSourceImpl implements DashboardRemoteDataSource {
   @override
   Future<List<String>> getImagesListByBreed(String breed) async {
     final data = await DioHelper.getData(
-      url: '$breed/${EndPoints.imageEndPoint}',
+      url: '${EndPoints.breedEndPoint}/$breed/${EndPoints.imageEndPoint}',
     );
     if (data.statusCode == 200 &&
         (data.data as Map<String, dynamic>)['status'] as String == 'success') {
       return List<String>.from(
         (data.data as Map<String, dynamic>)['message'] as Iterable<dynamic>,
-      ) as Future<List<String>>;
+      );
     } else {
       throw Exception('Something went wrong');
     }
@@ -54,11 +55,12 @@ class DashboardRemoteDataSourceImpl implements DashboardRemoteDataSource {
   @override
   Future<String> getRandomImageBySubBreed(String breed, String subBreed) async {
     final data = await DioHelper.getData(
-      url: '$breed/$subBreed/${EndPoints.randomImagesEndPoint}',
+      url:
+          '${EndPoints.breedEndPoint}/$breed/$subBreed/${EndPoints.randomImagesEndPoint}',
     );
     if (data.statusCode == 200 &&
         (data.data as Map<String, dynamic>)['status'] as String == 'success') {
-      return (data.data as Map<String, dynamic>)['message'] as Future<String>;
+      return (data.data as Map<String, dynamic>)['message'] as String;
     } else {
       throw Exception('Something went wrong');
     }
@@ -70,13 +72,14 @@ class DashboardRemoteDataSourceImpl implements DashboardRemoteDataSource {
     String subBreed,
   ) async {
     final data = await DioHelper.getData(
-      url: '$breed/$subBreed/${EndPoints.imageEndPoint}',
+      url:
+          '${EndPoints.breedEndPoint}/$breed/$subBreed/${EndPoints.imageEndPoint}',
     );
     if (data.statusCode == 200 &&
         (data.data as Map<String, dynamic>)['status'] as String == 'success') {
       return List<String>.from(
         (data.data as Map<String, dynamic>)['message'] as Iterable<dynamic>,
-      ) as Future<List<String>>;
+      );
     } else {
       throw Exception('Something went wrong');
     }

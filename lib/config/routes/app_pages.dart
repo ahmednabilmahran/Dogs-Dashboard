@@ -1,6 +1,10 @@
 import 'package:dogs_dashboard/config/routes/app_routes.dart';
 import 'package:dogs_dashboard/core/utils/app_strings.dart';
-import 'package:dogs_dashboard/features/dashboard/presentation/screens/dashboard_screen.dart';
+import 'package:dogs_dashboard/features/dashboard/presentation/screens/images_list_by_breed/images_list_by_breed_screen.dart';
+import 'package:dogs_dashboard/features/dashboard/presentation/screens/images_list_by_breed_and_sub_breed/images_list_by_breed_and_sub_breed_screen.dart';
+import 'package:dogs_dashboard/features/dashboard/presentation/screens/main_dashboard/dashboard_screen.dart';
+import 'package:dogs_dashboard/features/dashboard/presentation/screens/random_image_by_breed/random_image_by_breed_screen.dart';
+import 'package:dogs_dashboard/features/dashboard/presentation/screens/random_image_by_breed_and_sub_breed/random_image_by_breed_and_sub_breed_screen.dart';
 import 'package:dogs_dashboard/features/splash/presentation/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -30,6 +34,42 @@ class AppRoutes {
           },
           settings: const RouteSettings(name: Routes.dashboardRoute),
           transitionDuration: Duration.zero,
+        );
+
+      case Routes.randomImageByBreedRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return const RandomImageByBreedScreen();
+          },
+          settings: const RouteSettings(name: Routes.randomImageByBreedRoute),
+        );
+
+      case Routes.imagesListByBreedRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return const ImagesListByBreedScreen();
+          },
+          settings: const RouteSettings(name: Routes.imagesListByBreedRoute),
+        );
+
+      case Routes.randomImageByBreedAndSubBreedRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return const RandomImageByBreedAndSubBreedScreen();
+          },
+          settings: const RouteSettings(
+            name: Routes.randomImageByBreedAndSubBreedRoute,
+          ),
+        );
+
+      case Routes.imagesListByBreedAndSubBreedRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return const ImagesListByBreedAndSubBreedScreen();
+          },
+          settings: const RouteSettings(
+            name: Routes.imagesListByBreedAndSubBreedRoute,
+          ),
         );
 
       // Default case for undefined routes.

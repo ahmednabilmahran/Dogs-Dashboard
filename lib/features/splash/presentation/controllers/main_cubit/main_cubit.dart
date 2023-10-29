@@ -3,9 +3,11 @@ import 'dart:async';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:dogs_dashboard/core/base_usecase.dart';
 import 'package:dogs_dashboard/core/utils/app_strings.dart';
+import 'package:dogs_dashboard/core/utils/app_values.dart';
 import 'package:dogs_dashboard/core/utils/theme_helper.dart';
 import 'package:dogs_dashboard/features/splash/domain/usecases/change_lang.dart';
 import 'package:dogs_dashboard/features/splash/domain/usecases/change_theme_mode.dart';
+import 'package:dogs_dashboard/features/splash/domain/usecases/get_all_breeds_usecase.dart';
 import 'package:dogs_dashboard/features/splash/domain/usecases/get_saved_lang.dart';
 import 'package:dogs_dashboard/features/splash/domain/usecases/get_saved_theme_mode.dart';
 import 'package:dogs_dashboard/generated/l10n.dart';
@@ -31,6 +33,7 @@ enum ThemeModeX {
 class MainCubit extends Cubit<MainState> {
   /// Constructor
   MainCubit(
+    this._getAllBreedsUseCase,
     this._getSavedLangUseCase,
     this._changeLangUseCase,
     this._getSavedThemeModeUseCase,
@@ -41,6 +44,7 @@ class MainCubit extends Cubit<MainState> {
   static MainCubit get(BuildContext context) => BlocProvider.of(context);
 
   // Private members
+  final GetAllBreedsUseCase _getAllBreedsUseCase;
   final GetSavedLangUseCase _getSavedLangUseCase;
   final ChangeLangUseCase _changeLangUseCase;
   final GetSavedThemeModeUseCase _getSavedThemeModeUseCase;
@@ -51,6 +55,20 @@ class MainCubit extends Cubit<MainState> {
 
   /// The current theme mode.
   ThemeMode currentThemeMode = ThemeMode.system;
+
+  /// Retrieves the list of available dog breeds.
+  Future<void> getAllBreeds() async {
+    emit(GetAllBreedsLoadingState());
+    final result = await _getAllBreedsUseCase.call(
+      NoParameters(),
+    );
+    result.fold((l) {
+      emit(GetAllBreedsErrorState(l.errMessage));
+    }, (r) {
+      AppValues.dogBreeds = r;
+      emit(GetAllBreedsSuccessState());
+    });
+  }
 
   /// Changes the app's current theme.
   Future<void> changeTheme({

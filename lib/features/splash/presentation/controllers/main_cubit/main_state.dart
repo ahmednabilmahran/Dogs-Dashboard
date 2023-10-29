@@ -24,3 +24,12 @@ class MainGetThemeModeState extends MainState {}
 
 /// The state representing a change in the current theme mode.
 class MainChangeThemeState extends MainState {}
+
+class GetAllBreedsLoadingState extends MainState {}
+
+class GetAllBreedsSuccessState extends MainState {}
+
+class GetAllBreedsErrorState extends MainState {
+  GetAllBreedsErrorState(this.error);
+  final String error;
+}

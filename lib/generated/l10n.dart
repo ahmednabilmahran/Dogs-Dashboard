@@ -169,6 +169,56 @@ class S {
       args: [],
     );
   }
+
+  /// `Select a breed`
+  String get selectBreed {
+    return Intl.message(
+      'Select a breed',
+      name: 'selectBreed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select a sub breed`
+  String get selectSubBreed {
+    return Intl.message(
+      'Select a sub breed',
+      name: 'selectSubBreed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid Option`
+  String get invalidOption {
+    return Intl.message(
+      'Invalid Option',
+      name: 'invalidOption',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Generate`
+  String get generate {
+    return Intl.message(
+      'Generate',
+      name: 'generate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Try again`
+  String get tryAgain {
+    return Intl.message(
+      'Try again',
+      name: 'tryAgain',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

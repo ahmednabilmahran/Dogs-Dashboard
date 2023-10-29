@@ -1,3 +1,4 @@
+import 'package:dogs_dashboard/config/routes/app_routes.dart';
 import 'package:dogs_dashboard/features/dashboard/presentation/widgets/dashboard_card.dart';
 import 'package:dogs_dashboard/generated/l10n.dart';
 import 'package:flutter/material.dart';
@@ -28,28 +29,40 @@ class OptionsGrid extends StatelessWidget {
         DashboardCard(
           title: S.of(context).randomImageByBreed,
           onTap: () {
-            // Navigate to Random Image by Breed screen
+            Navigator.pushNamed(
+              context,
+              Routes.randomImageByBreedRoute,
+            );
           },
         ),
         // Dashboard card for Images List by Breed
         DashboardCard(
           title: S.of(context).imagesListByBreed,
           onTap: () {
-            // Navigate to Images List by Breed screen
+            Navigator.pushNamed(
+              context,
+              Routes.imagesListByBreedRoute,
+            );
           },
         ),
         // Dashboard card for Random Image by Breed and Sub-Breed
         DashboardCard(
           title: S.of(context).randomImageByBreedAndSubBreed,
           onTap: () {
-            // Navigate to Random Image by Breed and Sub-Breed screen
+            Navigator.pushNamed(
+              context,
+              Routes.randomImageByBreedAndSubBreedRoute,
+            );
           },
         ),
         // Dashboard card for Images List by Breed and Sub-Breed
         DashboardCard(
           title: S.of(context).imagesListByBreedAndSubBreed,
           onTap: () {
-            // Navigate to Images List by Breed and Sub-Breed screen
+            Navigator.pushNamed(
+              context,
+              Routes.imagesListByBreedAndSubBreedRoute,
+            );
           },
         ),
       ],

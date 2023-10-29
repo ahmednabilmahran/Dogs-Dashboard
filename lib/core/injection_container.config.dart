@@ -26,12 +26,15 @@ import '../features/dashboard/domain/usecases/get_random_image_by_sub_breed.dart
     as _i10;
 import '../features/splash/data/datasources/splash_local_datasource.dart'
     as _i11;
-import '../features/splash/data/repositories/splash_repo_impl.dart' as _i13;
-import '../features/splash/domain/repositories/splash_repo.dart' as _i12;
-import '../features/splash/domain/usecases/change_lang.dart' as _i14;
-import '../features/splash/domain/usecases/change_theme_mode.dart' as _i15;
-import '../features/splash/domain/usecases/get_saved_lang.dart' as _i16;
-import '../features/splash/domain/usecases/get_saved_theme_mode.dart' as _i17;
+import '../features/splash/data/datasources/splash_remote_datasource.dart'
+    as _i12;
+import '../features/splash/data/repositories/splash_repo_impl.dart' as _i14;
+import '../features/splash/domain/repositories/splash_repo.dart' as _i13;
+import '../features/splash/domain/usecases/change_lang.dart' as _i15;
+import '../features/splash/domain/usecases/change_theme_mode.dart' as _i16;
+import '../features/splash/domain/usecases/get_all_breeds_usecase.dart' as _i17;
+import '../features/splash/domain/usecases/get_saved_lang.dart' as _i18;
+import '../features/splash/domain/usecases/get_saved_theme_mode.dart' as _i19;
 import 'utils/database_manager.dart' as _i6;
 
 extension GetItInjectableX on _i1.GetIt {
@@ -64,16 +67,22 @@ extension GetItInjectableX on _i1.GetIt {
             dashboardRepo: gh<_i4.DashboardRepo>()));
     gh.lazySingleton<_i11.SplashLocalDataSource>(
         () => _i11.SplashLocalDataSourceImpl());
-    gh.lazySingleton<_i12.SplashRepo>(() => _i13.SplashRepoImpl(
-        splashLocalDataSource: gh<_i11.SplashLocalDataSource>()));
-    gh.lazySingleton<_i14.ChangeLangUseCase>(
-        () => _i14.ChangeLangUseCase(splashRepo: gh<_i12.SplashRepo>()));
-    gh.lazySingleton<_i15.ChangeThemeModeUseCase>(
-        () => _i15.ChangeThemeModeUseCase(splashRepo: gh<_i12.SplashRepo>()));
-    gh.lazySingleton<_i16.GetSavedLangUseCase>(
-        () => _i16.GetSavedLangUseCase(splashRepo: gh<_i12.SplashRepo>()));
-    gh.lazySingleton<_i17.GetSavedThemeModeUseCase>(
-        () => _i17.GetSavedThemeModeUseCase(splashRepo: gh<_i12.SplashRepo>()));
+    gh.lazySingleton<_i12.SplashRemoteDataSource>(
+        () => _i12.SplashRemoteDataSourceImpl());
+    gh.lazySingleton<_i13.SplashRepo>(() => _i14.SplashRepoImpl(
+          splashLocalDataSource: gh<_i11.SplashLocalDataSource>(),
+          splashRemoteDataSource: gh<_i12.SplashRemoteDataSource>(),
+        ));
+    gh.lazySingleton<_i15.ChangeLangUseCase>(
+        () => _i15.ChangeLangUseCase(splashRepo: gh<_i13.SplashRepo>()));
+    gh.lazySingleton<_i16.ChangeThemeModeUseCase>(
+        () => _i16.ChangeThemeModeUseCase(splashRepo: gh<_i13.SplashRepo>()));
+    gh.lazySingleton<_i17.GetAllBreedsUseCase>(
+        () => _i17.GetAllBreedsUseCase(splashRepo: gh<_i13.SplashRepo>()));
+    gh.lazySingleton<_i18.GetSavedLangUseCase>(
+        () => _i18.GetSavedLangUseCase(splashRepo: gh<_i13.SplashRepo>()));
+    gh.lazySingleton<_i19.GetSavedThemeModeUseCase>(
+        () => _i19.GetSavedThemeModeUseCase(splashRepo: gh<_i13.SplashRepo>()));
     return this;
   }
 }

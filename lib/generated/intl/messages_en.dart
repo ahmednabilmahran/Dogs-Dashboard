@@ -26,10 +26,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "dark": MessageLookupByLibrary.simpleMessage("Dark"),
         "dogsDashboard": MessageLookupByLibrary.simpleMessage("Dogs Dashboard"),
         "english": MessageLookupByLibrary.simpleMessage("English"),
+        "generate": MessageLookupByLibrary.simpleMessage("Generate"),
         "imagesListByBreed":
             MessageLookupByLibrary.simpleMessage("Images list by breed"),
         "imagesListByBreedAndSubBreed": MessageLookupByLibrary.simpleMessage(
             "Images list by breed and sub breed"),
+        "invalidOption": MessageLookupByLibrary.simpleMessage("Invalid Option"),
         "italian": MessageLookupByLibrary.simpleMessage("Italian"),
         "light": MessageLookupByLibrary.simpleMessage("Light"),
         "noInternetConnection":
@@ -38,6 +40,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Random image by breed"),
         "randomImageByBreedAndSubBreed": MessageLookupByLibrary.simpleMessage(
             "Random image by breed and sub breed"),
-        "system": MessageLookupByLibrary.simpleMessage("System")
+        "selectBreed": MessageLookupByLibrary.simpleMessage("Select a breed"),
+        "selectSubBreed":
+            MessageLookupByLibrary.simpleMessage("Select a sub breed"),
+        "system": MessageLookupByLibrary.simpleMessage("System"),
+        "tryAgain": MessageLookupByLibrary.simpleMessage("Try again")
       };
 }
