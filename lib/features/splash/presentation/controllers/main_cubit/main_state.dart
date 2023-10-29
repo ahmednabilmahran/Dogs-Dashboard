@@ -25,11 +25,19 @@ class MainGetThemeModeState extends MainState {}
 /// The state representing a change in the current theme mode.
 class MainChangeThemeState extends MainState {}
 
+/// The state representing a loading for all breeds.
+
 class GetAllBreedsLoadingState extends MainState {}
+
+/// The state representing a success for getting all breeds.
 
 class GetAllBreedsSuccessState extends MainState {}
 
+/// The state representing a error for getting all breeds.
 class GetAllBreedsErrorState extends MainState {
+  /// Constructor
   GetAllBreedsErrorState(this.error);
+
+  /// [error] variable
   final String error;
 }

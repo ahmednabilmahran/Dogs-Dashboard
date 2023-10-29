@@ -5,6 +5,8 @@ import 'package:dogs_dashboard/features/splash/domain/repositories/splash_repo.d
 import 'package:injectable/injectable.dart';
 
 @lazySingleton
+
+/// GetAllBreedsUseCase
 class GetAllBreedsUseCase
     implements BaseUseCase<Failure, Map<String, List<String>>, NoParameters> {
   /// Creates an instance of [GetAllBreedsUseCase],

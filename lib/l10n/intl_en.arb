@@ -15,5 +15,6 @@
   "selectSubBreed": "Select a sub breed",
   "invalidOption": "Invalid Option",
   "generate": "Generate",
-  "tryAgain": "Try again"
+  "tryAgain": "Try again",
+  "thereIsNoSubBreeds": "There is no sub breeds"
 }

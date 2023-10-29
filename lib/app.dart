@@ -38,10 +38,10 @@ class DogsDashboardApp extends StatelessWidget {
         getIt<GetSavedThemeModeUseCase>(),
         getIt<ChangeThemeModeUseCase>(),
       )
-        ..getAllBreeds()
         ..getSavedLang()
+        ..getSavedThemeMode()
         ..checkConnectivity()
-        ..getSavedThemeMode(),
+        ..getAllBreeds(),
       child: Sizer(
         builder: (context, orientation, deviceType) => NoGlowScroll(
           child: BlocBuilder<MainCubit, MainState>(

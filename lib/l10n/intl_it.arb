@@ -15,5 +15,6 @@
   "selectSubBreed": "Seleziona una sottorazza",
   "invalidOption": "Opzione non valida",
   "generate": "Generaû",
-  "tryAgain": "Riprova"
+  "tryAgain": "Riprova",
+  "thereIsNoSubBreeds": "Nessuna sottorazza"
 }

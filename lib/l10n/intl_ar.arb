@@ -15,5 +15,6 @@
   "selectSubBreed": "اختر سلالة فرعية",
   "invalidOption": "خيار غير صالح",
   "generate": "إنشاء",
-  "tryAgain": "اعد المحاولة"
+  "tryAgain": "اعد المحاولة",
+  "thereIsNoSubBreeds": "لا يوجد سلالات فرعية"
 }

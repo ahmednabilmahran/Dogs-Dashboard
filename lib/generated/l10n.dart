@@ -219,6 +219,16 @@ class S {
       args: [],
     );
   }
+
+  /// `There is no sub breeds`
+  String get thereIsNoSubBreeds {
+    return Intl.message(
+      'There is no sub breeds',
+      name: 'thereIsNoSubBreeds',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

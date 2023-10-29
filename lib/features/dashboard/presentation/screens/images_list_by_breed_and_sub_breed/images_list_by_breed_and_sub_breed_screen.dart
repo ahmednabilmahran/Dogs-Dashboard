@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
+///
 class ImagesListByBreedAndSubBreedScreen extends StatelessWidget {
+  /// Constructor
   const ImagesListByBreedAndSubBreedScreen({super.key});
 
   @override

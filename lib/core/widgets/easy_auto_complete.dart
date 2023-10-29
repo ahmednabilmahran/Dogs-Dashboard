@@ -173,6 +173,13 @@ class _EasyAutocompleteState extends State<EasyAutocomplete> {
     });
   }
 
+  @override
+  void didUpdateWidget(covariant EasyAutocomplete oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    // When the widget is updated, refresh the suggestions
+    updateSuggestions(_controller.text);
+  }
+
   void openOverlay() {
     if (_overlayEntry == null) {
       final renderBox = context.findRenderObject()! as RenderBox;
@@ -213,9 +220,12 @@ class _EasyAutocompleteState extends State<EasyAutocomplete> {
         ),
       );
     }
+
     if (!_hasOpenedOverlay) {
       Overlay.of(context).insert(_overlayEntry!);
       setState(() => _hasOpenedOverlay = true);
+    } else {
+      updateSuggestions(_controller.text);
     }
   }
 

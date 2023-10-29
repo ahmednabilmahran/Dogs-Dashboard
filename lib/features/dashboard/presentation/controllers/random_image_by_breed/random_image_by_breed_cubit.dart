@@ -4,11 +4,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 part 'random_image_by_breed_state.dart';
 
+/// RandomImageByBreedCubit
 class RandomImageByBreedCubit extends Cubit<RandomImageByBreedState> {
+  /// Constructor
   RandomImageByBreedCubit({
     required this.getRandomImageByBreedUseCase,
   }) : super(RandomImageByBreedInitial());
 
+  /// method to get instance of the cubit
   static RandomImageByBreedCubit get(BuildContext context) =>
       BlocProvider.of(context);
 
@@ -21,6 +24,7 @@ class RandomImageByBreedCubit extends Cubit<RandomImageByBreedState> {
   /// Create [getRandomImageByBreedUseCase] Variable
   final GetRandomImageByBreedUseCase getRandomImageByBreedUseCase;
 
+  /// [getRandomImageByBreed] Function
   Future<void> getRandomImageByBreed() async {
     if (randomImageByBreedFormKey.currentState!.validate()) {
       emit(RandomImageByBreedLoadingState());

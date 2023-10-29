@@ -125,7 +125,7 @@ class MainCubit extends Cubit<MainState> {
 
   /// Changes the app's current language.
   Future<void> changeLang(String code) async {
-    final response = await _changeLangUseCase.call(AppStrings.arabicCode);
+    final response = await _changeLangUseCase.call(code);
     response.fold(
       (failure) {},
       (value) {

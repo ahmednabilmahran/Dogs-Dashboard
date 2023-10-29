@@ -13,7 +13,9 @@ import 'package:dogs_dashboard/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+/// 
 class RandomImageByBreedScreen extends StatelessWidget {
+  /// Constructor
   const RandomImageByBreedScreen({super.key});
 
   @override
@@ -104,8 +106,7 @@ class RandomImageByBreedScreen extends StatelessWidget {
                           Center(
                             child: ElevatedButton(
                               onPressed: () async {
-                                await RandomImageByBreedCubit.get(context)
-                                    .getRandomImageByBreed();
+                                await cubit.getRandomImageByBreed();
                               },
                               child: Text(S.of(context).tryAgain),
                             ),

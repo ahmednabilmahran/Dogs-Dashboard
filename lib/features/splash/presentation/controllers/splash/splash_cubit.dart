@@ -71,7 +71,7 @@ class SplashCubit extends Cubit<SplashState> {
 
   /// Initializes animations.
   void _initializeAnimations() {
-    firstAnimation = Tween(begin: 0.7, end: 0.9).animate(_firstController);
+    firstAnimation = Tween(begin: 0.5, end: 0.7).animate(_firstController);
     colorsAnimation = TweenSequence<Color?>(_colors).animate(_secondController);
     secondAnimation = Tween(begin: 1.4, end: 25.1).animate(_secondController);
   }

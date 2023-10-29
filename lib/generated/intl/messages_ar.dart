@@ -44,6 +44,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "selectSubBreed":
             MessageLookupByLibrary.simpleMessage("اختر سلالة فرعية"),
         "system": MessageLookupByLibrary.simpleMessage("نظام"),
+        "thereIsNoSubBreeds":
+            MessageLookupByLibrary.simpleMessage("لا يوجد سلالات فرعية"),
         "tryAgain": MessageLookupByLibrary.simpleMessage("اعد المحاولة")
       };
 }

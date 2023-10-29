@@ -44,6 +44,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "selectSubBreed":
             MessageLookupByLibrary.simpleMessage("Select a sub breed"),
         "system": MessageLookupByLibrary.simpleMessage("System"),
+        "thereIsNoSubBreeds":
+            MessageLookupByLibrary.simpleMessage("There is no sub breeds"),
         "tryAgain": MessageLookupByLibrary.simpleMessage("Try again")
       };
 }

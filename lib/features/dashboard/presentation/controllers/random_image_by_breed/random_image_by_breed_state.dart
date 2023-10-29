@@ -1,3 +1,5 @@
+// ignore_for_file: public_member_api_docs
+
 part of 'random_image_by_breed_cubit.dart';
 
 abstract class RandomImageByBreedState {}
