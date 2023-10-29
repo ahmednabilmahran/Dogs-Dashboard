@@ -34,15 +34,19 @@ class RandomImageByBreedAndSubBreedScreen extends StatelessWidget {
       child: BlocBuilder<MainCubit, MainState>(
         builder: (mainContext, mainState) {
           if (mainState is GetAllBreedsLoadingState) {
-            return const Center(child: CircularProgressIndicator.adaptive());
+            return const Scaffold(
+              body: Center(child: CircularProgressIndicator.adaptive()),
+            );
           }
           if (mainState is GetAllBreedsErrorState) {
-            return Center(
-              child: ElevatedButton(
-                onPressed: () async {
-                  await MainCubit.get(context).getAllBreeds();
-                },
-                child: Text(S.of(context).tryAgain),
+            return Scaffold(
+              body: Center(
+                child: ElevatedButton(
+                  onPressed: () async {
+                    await MainCubit.get(context).getAllBreeds();
+                  },
+                  child: Text(S.of(context).tryAgain),
+                ),
               ),
             );
           }
@@ -59,7 +63,7 @@ class RandomImageByBreedAndSubBreedScreen extends StatelessWidget {
                 // Custom App Bar Section
                 appBar: customAppBar(
                   context: context,
-                  title: S.of(context).randomImageByBreed,
+                  title: S.of(context).randomImageByBreedAndSubBreed,
                   haveBackButton: true,
                 ),
 

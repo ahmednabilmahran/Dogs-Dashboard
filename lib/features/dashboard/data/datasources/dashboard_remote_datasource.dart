@@ -40,7 +40,7 @@ class DashboardRemoteDataSourceImpl implements DashboardRemoteDataSource {
   @override
   Future<List<String>> getImagesListByBreed(String breed) async {
     final data = await DioHelper.getData(
-      url: '${EndPoints.breedEndPoint}/$breed/${EndPoints.imageEndPoint}',
+      url: '${EndPoints.breedEndPoint}/$breed/${EndPoints.imagesEndPoint}',
     );
     if (data.statusCode == 200 &&
         (data.data as Map<String, dynamic>)['status'] as String == 'success') {
@@ -73,7 +73,7 @@ class DashboardRemoteDataSourceImpl implements DashboardRemoteDataSource {
   ) async {
     final data = await DioHelper.getData(
       url:
-          '${EndPoints.breedEndPoint}/$breed/$subBreed/${EndPoints.imageEndPoint}',
+          '${EndPoints.breedEndPoint}/$breed/$subBreed/${EndPoints.imagesEndPoint}',
     );
     if (data.statusCode == 200 &&
         (data.data as Map<String, dynamic>)['status'] as String == 'success') {

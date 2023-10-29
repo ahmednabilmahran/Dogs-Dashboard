@@ -24,7 +24,8 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
         "dark": MessageLookupByLibrary.simpleMessage("داكن"),
-        "dogsDashboard": MessageLookupByLibrary.simpleMessage("عرض الكلاب"),
+        "dogsDashboard":
+            MessageLookupByLibrary.simpleMessage("عرض سلالات الكلاب"),
         "english": MessageLookupByLibrary.simpleMessage("الإنجليزية"),
         "generate": MessageLookupByLibrary.simpleMessage("إنشاء"),
         "imagesListByBreed":

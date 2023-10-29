@@ -13,7 +13,7 @@ import 'package:dogs_dashboard/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-/// 
+///
 class RandomImageByBreedScreen extends StatelessWidget {
   /// Constructor
   const RandomImageByBreedScreen({super.key});
@@ -33,15 +33,19 @@ class RandomImageByBreedScreen extends StatelessWidget {
       child: BlocBuilder<MainCubit, MainState>(
         builder: (mainContext, mainState) {
           if (mainState is GetAllBreedsLoadingState) {
-            return const Center(child: CircularProgressIndicator.adaptive());
+            return const Scaffold(
+              body: Center(child: CircularProgressIndicator.adaptive()),
+            );
           }
           if (mainState is GetAllBreedsErrorState) {
-            return Center(
-              child: ElevatedButton(
-                onPressed: () async {
-                  await MainCubit.get(context).getAllBreeds();
-                },
-                child: Text(S.of(context).tryAgain),
+            return Scaffold(
+              body: Center(
+                child: ElevatedButton(
+                  onPressed: () async {
+                    await MainCubit.get(context).getAllBreeds();
+                  },
+                  child: Text(S.of(context).tryAgain),
+                ),
               ),
             );
           }
